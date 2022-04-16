@@ -7,7 +7,7 @@
 <ol>
   <li>Access the program through the link at the title</li>
   <li>Open the Console using ctrl+j</li>
-  <li>Initialize game(); to start playing</li>
+  <li>Initialize playGame(); to start playing</li>
 </ol>
 
 <h2>Skills</h2>
