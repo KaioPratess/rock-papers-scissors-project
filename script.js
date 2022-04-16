@@ -32,34 +32,37 @@ let playerScore = 0;
 // 5. If the Computer wins add 1 point to the machine
 let computerScore = 0;
 
-function playRound() {
-  let playerSelection = userInput();
-  let computerSelection = computerPlay();
 
+function playRound(playerSelection, computerSelection) {
   if(playerSelection === computerSelection) {
-    return "It's a tie"
+    console.log("It's a tie");
+    return 'tie';
   }
   else if(playerSelection === 'rock' && computerSelection === 'scissor') {
-    return "You won! Rock beats Scissor"
+    console.log("You won! Rock beats Scissor");
+    return ++playerScore
   }
   else if(playerSelection === 'rock' && computerSelection === 'paper') {
-    return "You lose! Paper beats Rock"
+    console.log("You lose! Paper beats Rock");
+    return ++computerScore
   }
   else if(playerSelection === 'scissor' && computerSelection === 'paper') {
-    console.log();
-    return "You won! Scissor beats Paper"
+    console.log("You won! Scissor beats Paper");
+    return ++playerScore
   }
   else if(playerSelection === 'scissor' && computerSelection === 'rock') {
-    return "You lose! Rock beats Scissor";
+    console.log("You lose! Rock beats Scissor");
+    return ++computerScore
   }
   else if(playerSelection === 'paper' && computerSelection === 'rock') {
-    return "You won! Paper beats Rock"
+    console.log("You won! Paper beats Rock");
+    return ++playerScore
   }
   else if(playerSelection === 'paper' && computerSelection === 'scissor') {
-    return "You lose! Scissor beats Paper"
+    console.log( "You lose! Scissor beats Paper");
+    return ++computerScore
   }
 }
-
 
 // 2. Start round 2
 //     1. Repeat all round 1 inside steps
@@ -69,7 +72,24 @@ function playRound() {
 //     1. Repeat all round 1 inside steps
 // 5. Start round 5
 //     1. Repeat all round 1 inside steps
+function game() {
+  for(let round = 1; round <= 5; round++) {
+    console.log(`Round: ${round}`);
+    if(playRound(userInput(), computerPlay()) === 'tie') {
+      round -= 1;
+    };
+    console.log(`Player Score: ${playerScore} | Machine Score: ${computerScore}`);
+  }
+  defineWinner(playerScore, computerScore);
+}
 
-// 2. Compare the User and the Computer Scores
+// 6. Compare the User and the Computer Scores
 //     1. If userScore is greater than computerScore than return “You are the Champion!”
 //     2. If userScore is less than computerScore than return “The Machine won! More luck next time!”
+function defineWinner(pScore, cScore) {
+  if(pScore > cScore) {
+    return console.log("You are the Champion! Congratulations!")
+  } else {
+    return console.log("The Machine Won! More luck next time")
+  }
+}
