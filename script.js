@@ -2,14 +2,14 @@
 // Constraints: 
 // the user input is case insensitive - ok
 // the user can only input ‘rock’, ‘paper’ or ‘scissor’ - pending
-function userInput() {
+function getUserPlay() {
   const input = prompt('Rock, Paper or Scissor?');
   const inputEdited = input.toString().toLowerCase();
   return inputEdited;
 }
 
 // 2. Computer inputs a random choice, either “rock”, “paper” or “scissor”
-function computerPlay() {
+function getComputerPlay() {
   const gameValues = ['rock', 'paper', 'scissor'];
   const randomInput = gameValues[getRandom(0, gameValues.length)];
   return randomInput;
@@ -72,10 +72,10 @@ function playRound(playerSelection, computerSelection) {
 //     1. Repeat all round 1 inside steps
 // 5. Start round 5
 //     1. Repeat all round 1 inside steps
-function game() {
+function playGame() {
   for(let round = 1; round <= 5; round++) {
     console.log(`Round: ${round}`);
-    if(playRound(userInput(), computerPlay()) === 'tie') {
+    if(playRound(getUserPlay(), getComputerPlay()) === 'tie') {
       round -= 1;
     };
     console.log(`Player Score: ${playerScore} | Machine Score: ${computerScore}`);
