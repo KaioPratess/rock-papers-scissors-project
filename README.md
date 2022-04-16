@@ -1,4 +1,4 @@
-<h1><a href=" https://kaiopratess.github.io/rock-papers-scissors-project/">rock-papers-scissors-project</a></h1>
+<h1><a href="https://kaiopratess.github.io/rock-papers-scissors-project/">rock-papers-scissors-project</a></h1>
 
 <h2>What this project is about?</h2>
 <p>This is a Rock Paper Scissors game to be played at the console. Project created for The Odin Project.
