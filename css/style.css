@@ -1,0 +1,156 @@
+/* GENERAL */
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background: #67B26F;  /* fallback for old browsers */
+  background: -webkit-linear-gradient(to right, #4ca2cd, #67B26F);  /* Chrome 10-25, Safari 5.1-6 */
+  background: linear-gradient(to right, #4ca2cd, #67B26F); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */  
+}
+
+
+img {
+  max-width: 100%;
+  display: block;
+}
+
+/* CONTENT */
+.main-container {
+  max-width: 900px;
+  margin: 0 auto;
+  font-family: 'Roboto', sans-serif;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+h1 {
+  font-size: 38px;
+  text-transform: uppercase;
+  font-weight: 700;
+  margin-bottom: 8px;
+}
+
+.results {
+  margin-bottom: -20px;
+  font-size: 16px;
+}
+
+.round {
+  font-size: 28px;
+  text-transform: uppercase;
+  font-weight: 700;
+  margin-top: -80px;
+  margin-bottom: 25px;
+}
+
+.main-panel {
+  display: flex;
+  align-items: center;
+  gap: 100px;
+  margin-bottom: 40px;
+}
+
+.player-selection, 
+.computer-selection {
+  width: 300px;
+  height: 300px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.player-img, 
+.machine-img {
+  width: 50px;
+  height: 50px;
+}
+
+
+.versus {
+  font-size: 24px;
+  font-weight: 700;
+  font-style: italic;
+}
+
+.score {
+  display: flex;
+  gap: 80px;
+  margin-bottom: 40px;
+}
+
+.player, .machine {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.player div:first-child, .machine div:last-child {
+  text-align: center;
+}
+
+.rock-paper-scissor {
+  display: flex;
+  gap: 150px;
+  margin-bottom: 100px;
+}
+
+.rock-paper-scissor div {
+  border: 2px solid black;
+  border-radius: 12px;
+  padding: 8px;
+  cursor: pointer;
+  width: 150px;
+  height: 150px;
+}
+
+.rock-paper-scissor div:hover {
+  background: #F3904F;  /* fallback for old browsers */
+  background: -webkit-linear-gradient(to right, #3B4371, #F3904F);  /* Chrome 10-25, Safari 5.1-6 */
+  background: linear-gradient(to right, #3B4371, #F3904F); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+
+}
+
+/* Player Info */
+.info-container {
+  width: 300px;
+  height: 200px;
+  background: #43C6AC;  /* fallback for old browsers */
+  background: -webkit-linear-gradient(to right, #191654, #43C6AC);  /* Chrome 10-25, Safari 5.1-6 */
+  background: linear-gradient(to right, #191654, #43C6AC); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */  
+  border: 2px solid black;
+  border-radius: 12px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  top: 50%;
+}
+
+.player-info {
+  display: flex;
+  gap: 15px;
+  flex-direction: column;
+}
+
+.player-info label {
+  display: block;
+  margin-bottom: 5px;
+  font-family: 'Roboto', sans-serif;
+  font-size: 18px;
+}
+
+.player-info input, select {
+  font-family: 'Roboto', sans-serif;
+  font-size: 14px;
+  color: white;
+  padding: 5px;
+  border-radius: 12px;
+  background-color: gray;
+  outline: none;
+  border: none;
+}
