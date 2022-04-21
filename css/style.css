@@ -92,6 +92,10 @@ h1 {
   text-align: center;
 }
 
+.girl {
+  display: none;
+}
+
 .rock-paper-scissor {
   display: flex;
   gap: 150px;
@@ -114,21 +118,35 @@ h1 {
 
 }
 
-/* Player Info */
+/* Player Info & Results*/
+.info-bg, 
+.winner-bg, 
+.loser-bg {
+  background-color: rgba(0,0,0,.7);
+  position: fixed;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+
 .info-container {
-  width: 300px;
-  height: 200px;
-  background: #43C6AC;  /* fallback for old browsers */
-  background: -webkit-linear-gradient(to right, #191654, #43C6AC);  /* Chrome 10-25, Safari 5.1-6 */
-  background: linear-gradient(to right, #191654, #43C6AC); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */  
+  width: 500px;
+  height: 300px;
+  background: #11998e;  /* fallback for old browsers */
+  background: -webkit-linear-gradient(to right, #38ef7d, #11998e);  /* Chrome 10-25, Safari 5.1-6 */
+  background: linear-gradient(to right, #38ef7d, #11998e); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+  
   border: 2px solid black;
   border-radius: 12px;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  position: absolute;
-  top: 50%;
+  box-shadow: 2px 2px 2px rgba(0,0,0,.5);
 }
 
 .player-info {
@@ -148,9 +166,71 @@ h1 {
   font-family: 'Roboto', sans-serif;
   font-size: 14px;
   color: white;
-  padding: 5px;
+  padding: 10px;
   border-radius: 12px;
   background-color: gray;
   outline: none;
   border: none;
+}
+
+.start-btn {
+  padding: 8px 16px;
+  border-radius: 12px;
+  border: 2px solid black;
+  cursor: pointer;
+  background-color: gray;
+  font-family: 'Roboto', sans-serif;
+  font-size: 14px;
+  color: white;
+}
+
+.start-btn:hover {
+  background: #43C6AC;  /* fallback for old browsers */
+  background: -webkit-linear-gradient(to right, #191654, #43C6AC);  /* Chrome 10-25, Safari 5.1-6 */
+  background: linear-gradient(to right, #191654, #43C6AC); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+}
+
+/* LOSER CHAMPION DISPLAY */
+.winner-bg, .loser-bg{
+  display: none;
+}
+
+.winner-container {
+  width: 500px;
+  height: 450px;
+  border: 2px solid black;
+  border-radius: 12px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 40px;
+  padding: 20px;
+  background: #CAC531;  /* fallback for old browsers */
+  background: -webkit-linear-gradient(to right, #F3F9A7, #CAC531);  /* Chrome 10-25, Safari 5.1-6 */
+  background: linear-gradient(to right, #F3F9A7, #CAC531); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+}
+
+.loser-container {
+  width: 500px;
+  height: 450px;
+  border: 2px solid black;
+  border-radius: 12px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 40px;
+  padding: 20px;
+  background: #ED213A;  /* fallback for old browsers */
+  background: -webkit-linear-gradient(to right, #93291E, #ED213A);  /* Chrome 10-25, Safari 5.1-6 */
+  background: linear-gradient(to right, #93291E, #ED213A); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */  
+}
+
+.winner-container div, .loser-container div {
+  width: 300px;
+  height: 300px;
+}
+
+.winner-container p, .loser-container p {
+  font-size: 22px;
+  text-transform: uppercase;
 }

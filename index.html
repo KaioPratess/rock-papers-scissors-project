@@ -33,7 +33,7 @@
       </div>
     </div>
 
-    <h2 class="round">Round <span>1</span></h2>
+    <h2 class="round">Round <span class="round-n">1</span></h2>
 
     <div class="score">
       <div class="player">
@@ -42,7 +42,7 @@
           <span class="player-score">0</span>
         </div>
         <div class="player-img">
-          <img src="img/boy.png" alt="Player">
+
         </div>
       </div>
 
@@ -76,21 +76,48 @@
     </footer>
   </div>
 
-  <div class="info-container">
-    <div class="player-info">
-      <div>
-        <label for="name">What is your Name?</label>
-        <input type="text" id="name" name="name">
-      </div>
-      <div>
-        <label for="genre">You are a?</label>
-        <select name="genre" id="genre">
-          <option value="boy">Boy</option>
-          <option value="girl">Girl</option>
-        </select>
+  <div class="info-bg">
+    <div class="info-container">
+      <div class="player-info">
+        <div>
+          <label for="name">What is your Name?</label>
+          <input type="text" id="name" name="name">
+        </div>
+        <div>
+          <label for="genre">You are a?</label>
+          <select name="genre" id="genre">
+            <option value="boy">Boy</option>
+            <option value="girl">Girl</option>
+          </select>
+        </div>
+        <button class="start-btn">Start Game</button>
       </div>
     </div>
   </div>
+
+  <div class="winner-bg">
+    <div class="winner-container">
+      <p>You are the Champion! Congratulations!</p>
+      <div>
+        <img src="img/trophy.png" alt="trophy">
+      </div>
+    </div>
+  </div>
+
+  <div class="loser-bg">
+    <div class="loser-container">
+      <p>The Machine Won! More luck next time</p>
+      <div>
+        <img src="img/loser.png" alt="loser">
+      </div>
+    </div>
+  </div>
+
+  <audio src="sounds/mixkit-losing-bleeps-2026.wav" class="quick-lose-audio"></audio>
+  <audio src="sounds/mixkit-quick-win-video-game-notification-269.wav" class="quick-win-audio"></audio>
+  <audio src="sounds/mixkit-retro-arcade-game-over-470.wav" class="game-over-audio"></audio>
+  <audio src="sounds/mixkit-video-game-win-2016.wav" class="win-audio"></audio>
+  <audio src="sounds/mixkit-glitch-static-1457.wav" class="tie-audio"></audio>
 </body>
 
 </html>
