@@ -3,12 +3,6 @@
 <h2>What this project is about?</h2>
 <p>This is a Rock Paper Scissors game to be played at the console. Project created for The Odin Project.</p>
 <p>You will be playing against the machine. There are 5 rounds and at the final the results are displayed for you</p>
-<h2>How to run?</h2>
-<ol>
-  <li>Access the program through the link at the title</li>
-  <li>Open the Console using ctrl+j</li>
-  <li>Initialize playGame(); to start playing</li>
-</ol>
 
 <h2>Skills</h2>
 <h3>JavaScript<h3>
@@ -18,6 +12,8 @@
   <li>For...Loops</li>
   <li>Conditionals</li>
   <li>Template Literals</li>
+  <li>DOM Manipulation and Events</li>
+
 </ul>
 
 <h3>Problem Solving Strategies</h3>
