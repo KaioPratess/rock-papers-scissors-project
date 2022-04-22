@@ -1,10 +1,14 @@
-// SELECTION INPUT AND DISPLAY
+// Get player input
 const playerInput = document.querySelectorAll('.select');
+
+function getUserPlay(event) {
+  const selectionImg = event.target.getAttribute('src');
+  const selectionAlt = event.target.getAttribute('alt').toLowerCase();
+  return [selectionImg, selectionAlt]
+}  
+
+// Display player input
 const playerSelectionDisplay = document.querySelector('.player-selection');
-const computerSelectionDisplay = document.querySelector('.computer-selection');
-const rock = document.querySelector('.rock');
-const paper = document.querySelector('.paper');
-const scissor = document.querySelector('.scissor');
 
 function displayUserSelection(playerInput) {
   playerSelectionDisplay.textContent = '';
@@ -13,6 +17,21 @@ function displayUserSelection(playerInput) {
   img.setAttribute("src",`${playerInput[0]}`);
   playerSelectionDisplay.appendChild(img);
 }  
+
+// Get computer input
+function getComputerPlay() {
+  const gameValues = ['rock', 'paper', 'scissor'];
+  const randomInput = gameValues[getRandom(0, gameValues.length)];
+  return randomInput;
+}  
+
+// generates a random number between two defined numbers
+function getRandom(min, max) {
+  return Math.floor(Math.random() * (max - min) + min)
+}  
+
+// Display computer input
+const computerSelectionDisplay = document.querySelector('.computer-selection');
 
 function displayComputerSelection(computerInput) {
   computerSelectionDisplay.textContent = '';
@@ -32,37 +51,12 @@ function displayComputerSelection(computerInput) {
   computerSelectionDisplay.appendChild(img);
 }  
 
-function getUserPlay(event) {
-  const selectionImg = event.target.getAttribute('src');
-  const selectionAlt = event.target.getAttribute('alt').toLowerCase();
-  return [selectionImg, selectionAlt]
-}  
-
-// Computer inputs a random choice, either “rock”, “paper” or “scissor”
-
-function getComputerPlay() {
-  const gameValues = ['rock', 'paper', 'scissor'];
-  const randomInput = gameValues[getRandom(0, gameValues.length)];
-  return randomInput;
-}  
-// generates a random number between two defined numbers
-function getRandom(min, max) {
-  return Math.floor(Math.random() * (max - min) + min)
-}  
-
-
-// SCORE
-
-// Stores the game scores
+// Store the game scores
 let playerScore = document.querySelector('.player-score');
 let computerScore = document.querySelector('.machine-score');
 
 playerScore.textContent = 0;
 computerScore.textContent = 0;
-
-
-// GAME LOGIC
-
 
 // Compare the User and Computer inputs and output a result
 const resultsDisplay = document.querySelector('.results');
@@ -124,20 +118,19 @@ function defineWinner(pScore, cScore) {
   }  
 }  
 
-
-// PLAY GAME
-const startBtn = document.querySelector('.start-btn');
-const restartBtn = document.querySelectorAll('.restart-btn');
-const initialScreen = document.querySelector('.info-bg');
-const userName = document.querySelector('#name');
+// Get user name and display it
 const playerName = document.querySelector('.player-name');
-const userGenre = document.querySelector('#genre');
-const playerImg = document.querySelector('.player-img');
-const roundNumber = document.querySelector('.round-n');
+const userName = document.querySelector('#name');
 
 function getUserName(event) {
   playerName.textContent = event.target.value;
 }
+
+userName.addEventListener('change', getUserName);
+
+// Get user genre and change icon
+const playerImg = document.querySelector('.player-img');
+const userGenre = document.querySelector('#genre');
 
 function setUserImg(select) {
   const img = document.createElement('img');
@@ -150,7 +143,11 @@ function setUserImg(select) {
   playerImg.appendChild(img);
 }
 
-userName.addEventListener('change', getUserName);
+// Play game
+const startBtn = document.querySelector('.start-btn');
+const restartBtn = document.querySelectorAll('.restart-btn');
+const initialScreen = document.querySelector('.info-bg');
+const roundNumber = document.querySelector('.round-n');
 
 function playGame() {
   const select = userGenre.options[userGenre.selectedIndex].value;
