@@ -234,3 +234,21 @@ h1 {
   font-size: 22px;
   text-transform: uppercase;
 }
+
+.restart-btn {
+  padding: 8px 16px;
+  border-radius: 12px;
+  border: 2px solid black;
+  cursor: pointer;
+  background-color: transparent;
+  font-family: 'Roboto', sans-serif;
+  font-size: 14px;
+  color: black;
+}
+
+.restart-btn:hover {
+  background: #43C6AC;  /* fallback for old browsers */
+  background: -webkit-linear-gradient(to right, #191654, #43C6AC);  /* Chrome 10-25, Safari 5.1-6 */
+  background: linear-gradient(to right, #191654, #43C6AC); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+  color: white;
+}
