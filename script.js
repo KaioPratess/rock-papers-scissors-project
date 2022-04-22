@@ -150,9 +150,6 @@ function setPlayerImg(select) {
   playerImg.appendChild(img);
 }
 
-console.log(playerGenre )
-
-
 // Start and Restart game
 const startBtn = document.querySelector('.start-btn');
 const restartBtn = document.querySelectorAll('.restart-btn');
