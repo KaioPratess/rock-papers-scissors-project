@@ -1,6 +1,4 @@
 
-<h2>What this project is about?</h2>
-
 <h1 align="center">Rock Papers Scissors</h1>
 
 <div align="center">
