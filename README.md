@@ -62,7 +62,7 @@ To clone and run this application, you'll need [Git](https://git-scm.com), [Node
 $ gh auth login --web
 
 #Fork this repository and clone your fork
-$ gh repo fork https://github.com/KaioPratess/ETCH-A-SKETCH.git --clone
+$ gh repo fork https://github.com/KaioPratess/rock-papers-scissors-project.git --clone
 ```
 
 After that, open the project using [LiveServer](https://marketplace.visualstudio.com/items?itemName=ritwickdey.LiveServer) or similar.
