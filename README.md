@@ -33,8 +33,7 @@
 
 ![kaiopratess github io_rock-papers-scissors-project_](https://user-images.githubusercontent.com/91703674/192356702-63702322-e27c-4404-bce7-58b702acacd5.png)
 
-This is a Rock Paper Scissors game to be played at the console. Project created for The Odin Project.
-You will be playing against the machine. There are 5 rounds and at the final the results are displayed for you.
+This is the classic Rock Paper Scissors game. You will be playing against the machine. There are 5 rounds and at the final the results are displayed for you.
 
 ### Built With
 
